@@ -14,7 +14,6 @@ public class Test {
     public static void main(String[] args){
 
         Log log = LogFactory.getLog(Test.class);
-        int a = 0;
 
         Runnable runnable = new Runnable() {
 
