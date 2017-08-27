@@ -150,36 +150,46 @@ public class GenerateMinuateData {
 
         //NO101
         String NO101_ELEC_PROD_DAY = "25 40 00";
-        elec_day_101 += (float) Math.random()*10 + map.get("elec_day_101");
-        sBuffer.append(" " + NO101_ELEC_PROD_DAY).append(" " + ChangeUtils.encode(elec_all_101) + "00");
+        elec_day_101 = (float) Math.random()*10 + map.get("elec_day_101");
+        log.info("NO101_ELEC_PROD_DAY：" + NO101_ELEC_PROD_DAY + "，elec_day_101：" + elec_day_101);
+        sBuffer.append(" " + NO101_ELEC_PROD_DAY).append(" " + ChangeUtils.encode(elec_day_101) + "00");
         String NO101_ELEC_PROD_Month = "26 40 00";
-        elec_mon_101 += (float) Math.random()*10 + map.get("elec_mon_101");
+        elec_mon_101 = (float) Math.random()*10 + map.get("elec_mon_101");
+        log.info("NO101_ELEC_PROD_Month：" + NO101_ELEC_PROD_Month + "，elec_mon_101：" + elec_mon_101);
         sBuffer.append(" " + NO101_ELEC_PROD_Month).append(" " + ChangeUtils.encode(elec_mon_101) + "00");
         String NO101_ELEC_PROD_Year = "27 40 00";
-        elec_year_101 += (float) Math.random()*10 + map.get("elec_year_101");
+        elec_year_101 = (float) Math.random()*10 + map.get("elec_year_101");
+        log.info("NO101_ELEC_PROD_Year：" + NO101_ELEC_PROD_Year + "，elec_year_101：" + elec_year_101);
         sBuffer.append(" " + NO101_ELEC_PROD_Year).append(" " + ChangeUtils.encode(elec_year_101) + "00");
         String NO101_ELEC_PROD_All = "28 40 00";
-        elec_all_101 += (float) Math.random()*10 + map.get("elec_all_101");
+        elec_all_101 = elec_year_101;
+        log.info("NO101_ELEC_PROD_All：" + NO101_ELEC_PROD_All + "，elec_all_101：" + elec_all_101);
         sBuffer.append(" " + NO101_ELEC_PROD_All).append(" " + ChangeUtils.encode(elec_all_101) + "00");
         String NO101_Convert_Eff = "1C 40 00";
         float con_eff_101 = (float) Math.random()*8 + 90;
+        log.info("NO101_Convert_Eff：" + NO101_Convert_Eff + "，con_eff_101：" + con_eff_101);
         sBuffer.append(" " + NO101_Convert_Eff).append(" " + ChangeUtils.encode(con_eff_101) + "00");
 
         //NO102
         String NO102_ELEC_PROD_DAY = "59 40 00";
-        elec_day_102 += (float) Math.random()*10 + map.get("elec_day_102");
+        elec_day_102 = (float) Math.random()*10 + map.get("elec_day_102");
+        log.info("NO102_ELEC_PROD_DAY：" + NO102_ELEC_PROD_DAY + "，elec_day_102：" + elec_day_102);
         sBuffer.append(" " + NO102_ELEC_PROD_DAY).append(" " + ChangeUtils.encode(elec_day_102) + "00");
         String NO102_ELEC_PROD_Month = "5A 40 00";
-        elec_mon_102 += (float) Math.random()*10 + map.get("elec_mon_102");
+        elec_mon_102 = (float) Math.random()*10 + map.get("elec_mon_102");
+        log.info("NO102_ELEC_PROD_Month：" + NO102_ELEC_PROD_Month + "，elec_mon_102：" + elec_mon_102);
         sBuffer.append(" " + NO102_ELEC_PROD_Month).append(" " + ChangeUtils.encode(elec_mon_102) + "00");
         String NO102_ELEC_PROD_Year = "5B 40 00";
-        elec_year_102 += (float) Math.random()*10 + map.get("elec_year_102");
+        elec_year_102 = (float) Math.random()*10 + map.get("elec_year_102");
+        log.info("NO102_ELEC_PROD_Year：" + NO102_ELEC_PROD_Year + "，elec_year_102：" + elec_year_102);
         sBuffer.append(" " + NO102_ELEC_PROD_Year).append(" " + ChangeUtils.encode(elec_year_102) + "00");
         String NO102_ELEC_PROD_All = "5C 40 00";
-        elec_all_102 += (float) Math.random()*10 + map.get("elec_all_102");
+        elec_all_102 = elec_year_102;
+        log.info("NO102_ELEC_PROD_All：" + NO102_ELEC_PROD_All + "，elec_all_102：" + elec_all_102);
         sBuffer.append(" " + NO102_ELEC_PROD_All).append(" " + ChangeUtils.encode(elec_all_102) + "00");
         String NO102_Convert_Eff = "50 40 00";
         float con_eff_102 = (float) Math.random()*8 + 90;
+        log.info("NO102_Convert_Eff：" + NO102_Convert_Eff + "，con_eff_102：" + con_eff_102);
         sBuffer.append(" " + NO102_Convert_Eff).append(" " + ChangeUtils.encode(con_eff_102) + "00");
 
         //NO204
@@ -193,7 +203,7 @@ public class GenerateMinuateData {
         elec_year_204 = (float) Math.random()*10 + map.get("elec_year_204");
         sBuffer.append(" " + NO204_ELEC_PROD_Year).append(" " + ChangeUtils.encode(elec_year_204) + "00");
         String NO204_ELEC_PROD_All = "99 40 00";
-        elec_all_204 = (float) Math.random()*10 + map.get("elec_all_204");
+        elec_all_204 = elec_year_204;
         sBuffer.append(" " + NO204_ELEC_PROD_All).append(" " + ChangeUtils.encode(elec_all_204) + "00");
         String NO204_Convert_Eff = "8D 40 00";
         float con_eff_204 = (float) Math.random()*8 + 90;
@@ -210,7 +220,7 @@ public class GenerateMinuateData {
         elec_year_205 = (float) Math.random()*10 + map.get("elec_year_205");
         sBuffer.append(" " + NO205_ELEC_PROD_Year).append(" " + ChangeUtils.encode(elec_year_205) + "00");
         String NO205_ELEC_PROD_All = "C9 40 00";
-        elec_all_205 = (float) Math.random()*10 + map.get("elec_all_205");
+        elec_all_205 = elec_year_205;
         sBuffer.append(" " + NO205_ELEC_PROD_All).append(" " + ChangeUtils.encode(elec_all_205) + "00");
         String NO205_Convert_Eff = "BD 40 00";
         float con_eff_205 = (float) Math.random()*8 + 90;
@@ -277,7 +287,7 @@ public class GenerateMinuateData {
         elec_year_401 = (float) Math.random()*10 + map.get("elec_year_401");
         sBuffer.append(" " + NO401_ELEC_PROD_Year).append(" " + ChangeUtils.encode(elec_year_401) + "00");
         String NO401_ELEC_PROD_All = "A1 41 00";
-        elec_all_401 = (float) Math.random()*10 + map.get("elec_all_401");
+        elec_all_401 = elec_year_401;
         sBuffer.append(" " + NO401_ELEC_PROD_All).append(" " + ChangeUtils.encode(elec_all_401) + "00");
         String NO401_Convert_Eff = "95 41 00";
         float con_eff_401 = (float) Math.random()*8 + 90;
@@ -294,7 +304,7 @@ public class GenerateMinuateData {
         elec_year_402 = (float) Math.random()*10 + map.get("elec_year_402");
         sBuffer.append(" " + NO402_ELEC_PROD_Year).append(" " + ChangeUtils.encode(elec_year_402) + "00");
         String NO402_ELEC_PROD_All = "D1 41 00";
-        elec_all_402 = (float) Math.random()*10 + map.get("elec_all_402");
+        elec_all_402 = elec_year_402;
         sBuffer.append(" " + NO402_ELEC_PROD_All).append(" " + ChangeUtils.encode(elec_all_402) + "00");
         String NO402_Convert_Eff = "C5 41 00";
         float con_eff_402 = (float) Math.random()*8 + 90;
@@ -311,7 +321,7 @@ public class GenerateMinuateData {
         elec_year_501 = (float) Math.random()*10 + map.get("elec_year_501");
         sBuffer.append(" " + NO501_ELEC_PROD_Year).append(" " + ChangeUtils.encode(elec_year_501) + "00");
         String NO501_ELEC_PROD_All = "01 42 00";
-        elec_all_501 = (float) Math.random()*10 + map.get("elec_all_501");
+        elec_all_501 = elec_year_501;
         sBuffer.append(" " + NO501_ELEC_PROD_All).append(" " + ChangeUtils.encode(elec_all_501) + "00");
         String NO501_Convert_Eff = "F5 41 00";
         float con_eff_501 = (float) Math.random()*8 + 90;
